@@ -11,7 +11,7 @@ const hotelRouter = express.Router();
 hotelRouter
 	.get("/search", async (req, res) => {
 		const hotels = await searchHotels_10_100();
-		res.json(hotels);
+		return res.json(hotels);
 	})
 	.get("/", async (req, res) => {
 		const hotels = await findAll();
